@@ -1,0 +1,22 @@
+{
+    "users": [
+      { "id": 1, "manager_id": "1", "username": "benjamin", "password": "root", "role": "manager" },
+      { "id": 2, "manager_id": "2", "username": "kevin", "password": "root", "role": "manager" }
+    ],
+    "Manager": [
+      { "id": 1, "employee_id": "1" },
+      { "id": 2, "employee_id": "2" }
+    ],
+    "EmployManager": [
+        { "id": 1, "manager_id": "1","employee_id": "1" },
+        { "id": 2, "manager_id": "1","employee_id": "2" }
+    ],
+    "Employee": [
+        {"id": 1, "firstname": "alexis", "lastname": "mortagne", "dateOfBirth": "11/09/2001", "dateOfEmployment": "23/04/2020"},
+        {"id": 2, "firstname": "Antoine", "lastname": "Salty", "dateOfBirth": "11/10/1990", "dateOfEmployment": "23/04/2009"}
+    ],
+    "Product": [
+        {"id": 1, "name": "expresso", "type": "coffee", "stock": "11", "price": "23"},
+        {"id": 2, "name": "mocha", "type": "coffee", "stock": "22", "price": "15"}
+    ]
+  }
