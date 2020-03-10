@@ -1,0 +1,16 @@
+.products {
+  margin-top: 2em;
+  .new-product {
+    float: right;
+    margin-bottom: 1em;
+  }
+  .product {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.07);
+      cursor: pointer;
+    }
+  }
+}
+
+
+
