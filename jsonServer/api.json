@@ -1,0 +1,34 @@
+{
+  "users": [
+    { "id": 1, "manager_id": "1", "username": "benjamin", "password": "root", "role": "manager" },
+    { "id": 2, "manager_id": "2", "username": "kevin", "password": "root", "role": "manager" }
+  ],
+  "Manager": [
+    { "id": 1, "employee_id": "1" },
+    { "id": 2, "employee_id": "2" }
+  ],
+  "EmployManager": [
+      { "id": 1, "manager_id": "1","employee_id": "1" },
+      { "id": 2, "manager_id": "1","employee_id": "2" }
+  ],
+  "Employee": [
+      {"id": 1, "firstname": "alexis", "lastname": "mortagne", "dateOfBirth": "11/09/2001", "dateOfEmployment": "23/04/2020"},
+      {"id": 2, "firstname": "Antoine", "lastname": "Salty", "dateOfBirth": "11/10/1990", "dateOfEmployment": "23/04/2009"}
+  ],
+  "Product": [
+    {"id": 1, "name": "cookissou", "type": "snack", "stock": 100, "price": 3},
+    {"id": 2, "name": "risitacos", "type": "snack", "stock": 67, "price": 9},
+    {"id": 3, "name": "milkshaq'oneil", "type": "cold_drink", "stock": 80, "price": 7},
+    {"id": 4, "name": "expresso", "type": "hot_drink", "stock": "11", "price": "23"},
+    {"id": 5, "name": "mocha", "type": "hot_drink", "stock": "22", "price": "15"}
+  ],
+  "OrderProduct": [
+    {"id": 1, "product_id": 1, "order_id": 1, "qty": 5},
+    {"id": 2, "product_id": 2, "order_id": 2, "qty": 1},
+    {"id": 3, "product_id": 3, "order_id": 2, "qty": 1}
+  ],
+  "Order": [
+    {"id": 1, "details": "uzi's order", "createdAt": "1583847019", "stock": "4"},
+    {"id": 2, "details": "liao's order", "createdAt": "1583847030", "stock": "3"}
+  ]
+}
