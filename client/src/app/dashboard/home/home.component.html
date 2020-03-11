@@ -1,1 +1,102 @@
-<p>home works!</p>
+<div class="container-fluid">
+  <h1>Vente</h1>
+  <h2>10/03/2020</h2>
+  <ng-container *ngIf="loading; then loadingBlock else homeBlock"></ng-container>
+  <ng-template #loadingBlock>
+    <div class="loading">
+      <img src="assets/images/coffee-loading.gif">
+    </div>
+  </ng-template>
+  <ng-template #homeBlock>
+    <div class="row scores">
+      <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Chiffre d'affaire</h5>
+            <span class="card-text ca">733.40€</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Panier moyen</h5>
+            <span class="card-text ca">5.30€</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de commande</h5>
+            <span class="card-text ca">87 </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Top 5 des ventes</h5>
+            <div class="row">
+              <div class="col-3 d-flex align-items-end">
+                <h6 class="mb-1">Café allongé</h6>
+              </div>
+              <div class="col-9">
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">37</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 d-flex align-items-end">
+                <h6 class="mb-1">Blonde Cappuccino</h6>
+              </div>
+              <div class="col-9">
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 78%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">19</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 d-flex align-items-end">
+                <h6 class="mb-1">Blonde Americano</h6>
+              </div>
+              <div class="col-9">
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 68%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">10</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 d-flex align-items-end">
+                <h6 class="mb-1">Cookie 3 chocolats</h6>
+              </div>
+              <div class="col-9">
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">7</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 d-flex align-items-end">
+                <h6 class="mb-1">Croissant</h6>
+              </div>
+              <div class="col-9">
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 58%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">6</div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+              <div class="d-flex">
+                <span class="badge badge-info"></span> <strong>Quantité</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

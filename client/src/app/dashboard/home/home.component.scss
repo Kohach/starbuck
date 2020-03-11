@@ -1,0 +1,33 @@
+h2 {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.row.scores {
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 3px 3px 3px 2px #e0e0e0;
+  border: 1px solid #bbbbbb;
+}
+
+.card .card-body .card-text.ca {
+  font-size: 2.75em;
+}
+
+.progress {
+  height: 1.5rem;
+  margin-top: 1.75em;
+}
+
+.badge {
+  margin-right: 10px;
+  width: 24px;
+  display: block;
+}
+
+.loading img {
+  display: block;
+  margin: 0 auto;
+}

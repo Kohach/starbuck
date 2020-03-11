@@ -11,3 +11,8 @@ input, select {
   height: 50px;
   color: #222;
 }
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}

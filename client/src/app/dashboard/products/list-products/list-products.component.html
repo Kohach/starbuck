@@ -1,36 +1,44 @@
 <div class="container-fluid">
   <h1>Liste des produits</h1>
-  <div class="products">
-    <div class="new-product">
-      <a routerLink="/dashboard/products/create">
-        <button class="btn btn-starbuck btn-success">
-          <i class="fa fa-plus"></i>
-          Nouveau
-        </button>
-      </a>
+  <ng-container *ngIf="loading; then loadingBlock else productsBlock"></ng-container>
+  <ng-template #loadingBlock>
+    <div class="loading">
+      <img src="assets/images/coffee-loading.gif">
     </div>
-    <table class="table">
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Produit</th>
-        <th scope="col">Type</th>
-        <th scope="col">Stock</th>
-        <th scope="col">Prix</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr
-        class="product"
-        [routerLink]="'/dashboard/products/edit/' + product.id"
-        *ngFor="let product of products">
-        <th scope="row">{{product.id}}</th>
-        <td>{{product.name}}</td>
-        <td>{{product.type}}</td>
-        <td>{{product.stock}}</td>
-        <td>{{product.price}}€</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
+  </ng-template>
+  <ng-template #productsBlock>
+    <div class="products">
+      <div class="new-product">
+        <a routerLink="/dashboard/products/create">
+          <button class="btn btn-starbuck btn-success">
+            <i class="fa fa-plus"></i>
+            Nouveau
+          </button>
+        </a>
+      </div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Produit</th>
+          <th scope="col">Type</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Prix</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr
+          class="product"
+          [routerLink]="'/dashboard/products/edit/' + product.id"
+          *ngFor="let product of products">
+          <th scope="row">{{product.id}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.type}}</td>
+          <td>{{product.stock}}</td>
+          <td>{{product.price}}€</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
 </div>
