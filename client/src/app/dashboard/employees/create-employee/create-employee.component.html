@@ -1,1 +1,52 @@
-<p>create-employee works!</p>
+<div class="container-fluid">
+  <h1>Nouvel employé</h1>
+  <div class="create-employee">
+    <form>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" (change)="employeeTypeChange($event)" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="employee">
+        <label class="form-check-label" for="inlineRadio1">Employé</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" (change)="employeeTypeChange($event)" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="manager">
+        <label class="form-check-label" for="inlineRadio2">Manager</label>
+      </div>
+      <div class="form-group">
+        <label for="employeeFirstName">Prénom</label>
+        <input type="text" class="form-control" id="employeeFirstName">
+      </div>
+      <div class="form-group">
+        <label for="employeeLastName">Nom</label>
+        <input type="text" class="form-control" id="employeeLastName">
+      </div>
+      <div *ngIf="!managerSelected" class="form-group">
+        <label for="productType">Manager</label>
+        <select class="form-control" id="productType">
+          <option disabled selected>Sélectionner le manager</option>
+          <option>Alexis Montagne</option>
+          <option>Adrien Sadboy Gomuscu</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="employeeDateOfBirth">Date de naissance</label>
+        <div class="input-group">
+          <input id="employeeDateOfBirth" class="form-control" placeholder="yyyy-mm-dd"
+                 name="dp" ngbDatepicker #d="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="employeeDateOfEmployment">Date d'embauche</label>
+        <div class="input-group">
+          <input id="employeeDateOfEmployment" class="form-control" placeholder="yyyy-mm-dd"
+                 name="dp" ngbDatepicker #d="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+    </form>
+  </div>
+</div>

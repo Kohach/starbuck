@@ -1,0 +1,46 @@
+.container-fluid {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  height: 50px;
+  color: #222;
+  font-size: 1.25em;
+  border: 1px solid #c5c5c5;
+}
+
+.login {
+  margin: 0 auto;
+
+  .login-header {
+    .header-logo {
+      height: 150px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .login-body {
+    margin-top: 1em;
+  }
+}
+
+.btn-starbuck {
+  background-color: #00a862;
+  color: #ffffff;
+  height: 48px;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+  border-radius: 500px;
+  font-size: 1.3rem;
+  padding: 18px 2.4rem;
+  line-height: .2;
+  position: relative;
+  display: inline-block;
+}
+
+.form-submit {
+  text-align: center;
+}

@@ -1,1 +1,46 @@
-<p>list-employees works!</p>
+<div class="container-fluid">
+  <h1>Liste des employés</h1>
+  <ng-container *ngIf="loading; then loadingBlock else employeesBlock"></ng-container>
+  <ng-template #loadingBlock>
+    <div class="loading">
+      <img src="assets/images/coffee-loading.gif">
+    </div>
+  </ng-template>
+  <ng-template #employeesBlock>
+    <div class="employees">
+      <div class="new-employee">
+        <a routerLink="/dashboard/employees/create">
+          <button class="btn btn-starbuck btn-success">
+            <i class="fa fa-plus"></i>
+            Nouveau
+          </button>
+        </a>
+      </div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Prénom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Manager</th>
+          <th scope="col">Date de naissance</th>
+          <th scope="col">Date d'embauche</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr
+          class="employee"
+          [routerLink]="'/dashboard/employees/edit/' + employee.id"
+          *ngFor="let employee of employees">
+          <th scope="row">{{employee.id}}</th>
+          <td>{{employee.firstname}}</td>
+          <td>{{employee.lastname}}</td>
+          <td>{{employee.employeeManager}}</td>
+          <td>{{employee.dateOfBirth}}</td>
+          <td>{{employee.dateOfEmployment}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
+</div>
